@@ -8,5 +8,6 @@ namespace TestGitHub
 {
     class Hats
     {
+        //New comment
     }
 }
