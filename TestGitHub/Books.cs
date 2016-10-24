@@ -9,5 +9,6 @@ namespace TestGitHub
     class Books
     {
         //New class
+        //Another comment
     }
 }
