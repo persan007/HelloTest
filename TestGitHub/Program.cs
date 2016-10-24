@@ -10,11 +10,17 @@ namespace TestGitHub
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Git");
-            Console.WriteLine("Hello again");
-            Console.WriteLine("More to say");
-            Console.WriteLine("Even more to say");
+            List<Dog> dogs = new List<Dog>();
+            dogs.Add(new Dog("Fido"));
+            dogs.Add(new Dog("Bob"));
+            dogs.Add(new Dog("Adam"));
+            
+
+            foreach (Dog dog in dogs)
+                Console.WriteLine(dog.Describe());
+
             Console.ReadKey();
         }
+            
     }
 }
