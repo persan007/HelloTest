@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TestGitHub
 {
@@ -24,7 +25,19 @@ namespace TestGitHub
             foreach (Dog dog in dogs)
                 Console.WriteLine(dog.Describe());
 
-            Console.ReadKey();
+            if (File.Exists("test.txt"))
+            {
+                string content = File.ReadAllText("test.txt");
+                Console.WriteLine("Följande text finns på filen:");
+                Console.WriteLine(content);
+            }
+            Console.WriteLine("Skriv in något nytt i filen:");
+            string newContent = Console.ReadLine();
+            while (newContent != "exit")
+            {
+                File.AppendAllText("test.txt", newContent + Environment.NewLine);
+                newContent = Console.ReadLine();
+            }
         }
             
     }
